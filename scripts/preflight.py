@@ -1,4 +1,3 @@
-#!/usr/bin/env python3
 """Run the RSNA competition dataset preflight.
 
 Example on Kaggle:
