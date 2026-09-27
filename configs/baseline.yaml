@@ -1,0 +1,21 @@
+project: KneesBrokeWeAwoke
+experiment: preflight_v0
+seed: 1337
+
+data:
+  study_id_column: StudyInstanceUID
+  target_count: 12
+  cache_dir: cache
+
+preprocessing:
+  planes:
+    - sagittal
+    - coronal
+    - axial
+  normalize: true
+
+validation:
+  metric: macro_roc_auc
+
+runtime:
+  deterministic: true

@@ -1,0 +1,46 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+.venv/
+venv/
+
+# IDE / OS
+.DS_Store
+.vscode/
+.idea/
+
+# Secrets
+.env
+.env.*
+.kaggle/
+kaggle.json
+
+# Competition data / medical imaging
+data/
+datasets/
+*.dcm
+*.dicom
+
+# Generated artifacts
+artifacts/
+cache/
+outputs/
+runs/
+checkpoints/
+weights/
+models/
+*.pt
+*.pth
+*.ckpt
+*.onnx
+*.engine
+
+# Notebooks
+.ipynb_checkpoints/
+
+# Local logs
+*.log
