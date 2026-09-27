@@ -139,7 +139,7 @@ def build_dummy_submission(sample_submission: pd.DataFrame) -> pd.DataFrame:
         SUBMISSION_REQUIRED_COLUMNS,
         "sample_submission.csv",
     )
-    submission = sample_submission.loc[:, SUBMISSION_REQUIRED_COLUMNS].copy()
+    submission = sample_submission.loc[:, list(SUBMISSION_REQUIRED_COLUMNS)].copy()
     for target in TARGET_COLUMNS:
         submission[target] = 0.5
     return submission
@@ -172,7 +172,7 @@ def summarize_frames(
 ) -> PreflightSummary:
     """Compute cheap dataset facts that should be logged before modeling."""
 
-    target_frame = train.loc[:, TARGET_COLUMNS]
+    target_frame = train.loc[:, list(TARGET_COLUMNS)]
     fully_labeled = int(target_frame.notna().all(axis=1).sum())
 
     series_counts = train_series.groupby(STUDY_ID_COLUMN).size()
